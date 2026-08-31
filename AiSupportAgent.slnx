@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/apps/">
+    <Project Path="apps/Api/Api.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/AgentCore/AgentCore.csproj" />
+    <Project Path="src/AgentRuntime/AgentRuntime.csproj" />
+    <Project Path="src/LLM/LLM.csproj" />
+    <Project Path="src/Policy/Policy.csproj" />
+    <Project Path="src/Tools/Tools.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AgentRuntime.Tests/AgentRuntime.Tests.csproj" />
+    <Project Path="tests/LLM.Tests/LLM.Tests.csproj" />
+  </Folder>
+</Solution>

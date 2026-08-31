@@ -1,0 +1,15 @@
+C:\Users\faris\ai-support-agent\src\Tools\bin\Debug\net10.0\Tools.deps.json
+C:\Users\faris\ai-support-agent\src\Tools\bin\Debug\net10.0\Tools.dll
+C:\Users\faris\ai-support-agent\src\Tools\bin\Debug\net10.0\Tools.pdb
+C:\Users\faris\ai-support-agent\src\Tools\bin\Debug\net10.0\AgentCore.dll
+C:\Users\faris\ai-support-agent\src\Tools\bin\Debug\net10.0\AgentCore.pdb
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.csproj.AssemblyReference.cache
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.AssemblyInfoInputs.cache
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.AssemblyInfo.cs
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.csproj.CoreCompileInputs.cache
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.csproj.Up2Date
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.dll
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\refint\Tools.dll
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.pdb
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\ref\Tools.dll

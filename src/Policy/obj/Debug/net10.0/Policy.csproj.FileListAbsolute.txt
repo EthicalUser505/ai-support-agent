@@ -1,0 +1,15 @@
+C:\Users\faris\ai-support-agent\src\Policy\bin\Debug\net10.0\Policy.deps.json
+C:\Users\faris\ai-support-agent\src\Policy\bin\Debug\net10.0\Policy.dll
+C:\Users\faris\ai-support-agent\src\Policy\bin\Debug\net10.0\Policy.pdb
+C:\Users\faris\ai-support-agent\src\Policy\bin\Debug\net10.0\AgentCore.dll
+C:\Users\faris\ai-support-agent\src\Policy\bin\Debug\net10.0\AgentCore.pdb
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.csproj.AssemblyReference.cache
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.AssemblyInfoInputs.cache
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.AssemblyInfo.cs
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.csproj.CoreCompileInputs.cache
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.csproj.Up2Date
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.dll
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\refint\Policy.dll
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.pdb
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\ref\Policy.dll
