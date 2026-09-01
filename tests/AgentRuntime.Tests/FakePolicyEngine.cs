@@ -6,9 +6,16 @@ namespace AgentRuntime.Tests;
 
 public sealed class FakePolicyEngine : IPolicyEngine
 {
+    private readonly bool _allowed;
+
     public ActionProposal? LastProposal { get; private set; }
 
     public AgentContext? LastContext { get; private set; }
+
+    public FakePolicyEngine(bool allowed = true)
+    {
+        _allowed = allowed;
+    }
 
     public Task<PolicyDecision> EvaluateAsync(
         ActionProposal proposal,
@@ -21,8 +28,11 @@ public sealed class FakePolicyEngine : IPolicyEngine
         return Task.FromResult(
             new PolicyDecision
             {
-                Allowed = true,
-                RequiresHumanApproval = false
+                Allowed = _allowed,
+                RequiresHumanApproval = false,
+                ValidationErrors = _allowed
+                    ? []
+                    : ["Action denied by test policy."]
             });
     }
 }

@@ -13,5 +13,6 @@
     <Project Path="tests/AgentRuntime.Tests/AgentRuntime.Tests.csproj" />
     <Project Path="tests/LLM.Tests/LLM.Tests.csproj" />
     <Project Path="tests/Policy.Tests/Policy.Tests.csproj" />
+    <Project Path="tests/Tools.Tests/Tools.Tests.csproj" />
   </Folder>
 </Solution>

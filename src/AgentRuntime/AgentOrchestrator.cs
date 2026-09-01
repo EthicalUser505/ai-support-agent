@@ -1,6 +1,6 @@
 using AgentCore.LLM;
-using AgentCore.Policy;
 using AgentCore.Models;
+using AgentCore.Policy;
 using AgentRuntime.Decisions;
 using AgentRuntime.Models;
 using AgentRuntime.Prompts;
@@ -56,11 +56,25 @@ public sealed class AgentOrchestrator : IAgentOrchestrator
                 decision.Action,
                 request.Context,
                 cancellationToken);
+
+            if (!policyDecision.Allowed)
+            {
+                return new AgentRunResult
+                {
+                    Status = AgentRunStatus.ActionDenied,
+                    Response = "I'm unable to carry out that request.",
+                    Decision = decision,
+                    PolicyDecision = policyDecision,
+                    LLMResponse = llmResponse
+                };
+            }
         }
 
         return new AgentRunResult
         {
-            Response = llmResponse.Content,
+            Status = AgentRunStatus.Completed,
+            Response = decision.Summary
+                ?? "I understand your request.",
             Decision = decision,
             PolicyDecision = policyDecision,
             LLMResponse = llmResponse
