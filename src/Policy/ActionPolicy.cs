@@ -19,15 +19,27 @@ public sealed class ActionPolicy : IPolicyEngine
             "lookup_order" => new PolicyDecision
             {
                 Allowed = true,
+                RequiresHumanApproval = false,
                 PolicyReferences =
                 [
                     "POL-ORDER-LOOKUP-001"
                 ]
             },
 
+            "refund_order" => new PolicyDecision
+            {
+                Allowed = true,
+                RequiresHumanApproval = true,
+                PolicyReferences =
+                [
+                    "POL-REFUND-APPROVAL-001"
+                ]
+            },
+
             _ => new PolicyDecision
             {
                 Allowed = false,
+                RequiresHumanApproval = false,
                 ValidationErrors =
                 [
                     $"Action '{proposal.Name}' is not permitted."

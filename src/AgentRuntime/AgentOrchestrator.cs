@@ -59,6 +59,7 @@ public sealed class AgentOrchestrator : IAgentOrchestrator
         {
             var executionResult =
                 await _actionExecution.ExecuteAsync(
+                    request.Context.ConversationId,
                     decision.Action,
                     request.Context,
                     cancellationToken);
@@ -70,7 +71,7 @@ public sealed class AgentOrchestrator : IAgentOrchestrator
                 executionResult.ToolResult;
 
             // Policy denial is a hard stop.
-            if (!policyDecision.Allowed)
+             if (!policyDecision.Allowed)
             {
                 return new AgentRunResult
                 {
@@ -79,6 +80,22 @@ public sealed class AgentOrchestrator : IAgentOrchestrator
                     Decision = decision,
                     PolicyDecision = policyDecision,
                     ToolResult = null,
+                    ApprovalRequest = null,
+                    LLMResponse = llmResponse
+                };
+            }
+
+            // Human in the loop (HITL)
+            if (executionResult.ApprovalRequest is not null)
+            {
+                return new AgentRunResult
+                {
+                    Status = AgentRunStatus.AwaitingHumanApproval,
+                    Response = "This request requires approval from a member of the business team.",
+                    Decision = decision,
+                    PolicyDecision = policyDecision,
+                    ToolResult = null,
+                    ApprovalRequest = executionResult.ApprovalRequest,
                     LLMResponse = llmResponse
                 };
             }
@@ -104,6 +121,7 @@ public sealed class AgentOrchestrator : IAgentOrchestrator
             Decision = decision,
             PolicyDecision = policyDecision,
             ToolResult = toolResult,
+            ApprovalRequest = null,
             LLMResponse = llmResponse
         };
     }

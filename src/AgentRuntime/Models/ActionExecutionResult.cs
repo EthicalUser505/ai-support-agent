@@ -7,4 +7,6 @@ public sealed class ActionExecutionResult
     public required PolicyDecision PolicyDecision { get; init; }
 
     public ToolResult? ToolResult { get; init; }
+
+    public ApprovalRequest? ApprovalRequest { get; init; }
 }

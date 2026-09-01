@@ -3,6 +3,7 @@ using AgentCore.Models;
 using AgentRuntime.Decisions;
 using AgentRuntime.Models;
 using AgentRuntime.Tools;
+using AgentRuntime.Approval;
 using AgentRuntime.Execution;
 
 
@@ -20,7 +21,12 @@ public class AgentOrchestratorTests
         var registry = new FakeToolRegistry();
         var toolExecutor = new ToolExecutor(registry);
 
-        var actionExecution = new ActionExecutionService(policy, toolExecutor);
+        var approval = new FakeApprovalService();
+
+        var actionExecution = new ActionExecutionService(
+            policy,
+            toolExecutor,
+            approval);
 
         var orchestrator = new AgentOrchestrator(
             llm,
@@ -77,7 +83,12 @@ public class AgentOrchestratorTests
         var registry = new FakeToolRegistry();
         var toolExecutor = new ToolExecutor(registry);
 
-        var actionExecution = new ActionExecutionService(policy, toolExecutor);
+        var approval = new FakeApprovalService();
+
+        var actionExecution = new ActionExecutionService(
+            policy,
+            toolExecutor,
+            approval);
 
         var orchestrator = new AgentOrchestrator(
             llm,
@@ -140,7 +151,12 @@ public class AgentOrchestratorTests
 
         var executor = new ToolExecutor(registry);
 
-        var actionExecution = new ActionExecutionService(policy, executor);
+        var approval = new FakeApprovalService();
+
+        var actionExecution = new ActionExecutionService(
+            policy,
+            executor,
+            approval);
 
         var orchestrator = new AgentOrchestrator(
             llm,
@@ -200,7 +216,12 @@ public class AgentOrchestratorTests
 
         var executor = new ToolExecutor(registry);
 
-        var actionExecution = new ActionExecutionService(policy, executor);
+        var approval = new FakeApprovalService();
+
+        var actionExecution = new ActionExecutionService(
+            policy,
+            executor,
+            approval);
 
         var orchestrator = new AgentOrchestrator(
             llm,

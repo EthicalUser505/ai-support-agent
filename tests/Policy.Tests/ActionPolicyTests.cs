@@ -88,12 +88,15 @@ public sealed class ActionPolicyTests
     }
 
     [Fact]
-    public async Task EvaluateAsync_RefundOrder_DeniesAction()
+    public async Task EvaluateAsync_RefundOrder_RequiresHumanApproval()
     {
         var proposal = new ActionProposal
         {
             Name = "refund_order",
-            Parameters = new Dictionary<string, object?>(),
+            Parameters = new Dictionary<string, object?>
+            {
+                ["order_id"] = "ORD-123"
+            },
             Confidence = 0.99
         };
 
@@ -101,8 +104,13 @@ public sealed class ActionPolicyTests
             proposal,
             CreateContext());
 
-        Assert.False(result.Allowed);
-        Assert.NotEmpty(result.ValidationErrors);
+        Assert.True(result.Allowed);
+        Assert.True(result.RequiresHumanApproval);
+        Assert.Empty(result.ValidationErrors);
+
+        Assert.Contains(
+            "POL-REFUND-APPROVAL-001",
+            result.PolicyReferences);
     }
 
     [Fact]

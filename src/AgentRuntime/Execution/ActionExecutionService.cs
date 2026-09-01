@@ -1,3 +1,4 @@
+using AgentCore.Approval;
 using AgentCore.Context;
 using AgentCore.Models;
 using AgentCore.Policy;
@@ -10,20 +11,27 @@ public sealed class ActionExecutionService
 {
     private readonly IPolicyEngine _policy;
     private readonly ToolExecutor _toolExecutor;
+    private readonly IApprovalService _approval;
 
     public ActionExecutionService(
         IPolicyEngine policy,
-        ToolExecutor toolExecutor)
+        ToolExecutor toolExecutor,
+        IApprovalService approval)
     {
         _policy = policy;
         _toolExecutor = toolExecutor;
+        _approval = approval;
     }
 
     public async Task<ActionExecutionResult> ExecuteAsync(
+        string conversationId,
         ActionProposal proposal,
         AgentContext context,
         CancellationToken cancellationToken = default)
     {
+        ArgumentException.ThrowIfNullOrWhiteSpace(
+            conversationId);
+
         ArgumentNullException.ThrowIfNull(proposal);
         ArgumentNullException.ThrowIfNull(context);
 
@@ -37,6 +45,21 @@ public sealed class ActionExecutionService
             return new ActionExecutionResult
             {
                 PolicyDecision = policyDecision
+            };
+        }
+
+        if (policyDecision.RequiresHumanApproval)
+        {
+            var approval = await _approval.CreateAsync(
+                conversationId,
+                proposal,
+                "This action requires human approval.",
+                cancellationToken);
+
+            return new ActionExecutionResult
+            {
+                PolicyDecision = policyDecision,
+                ApprovalRequest = approval
             };
         }
 

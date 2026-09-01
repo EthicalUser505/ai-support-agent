@@ -16,4 +16,6 @@ public sealed class AgentRunResult
     public ToolResult? ToolResult { get; init; }
 
     public LLMResponse? LLMResponse { get; init; }
+
+    public ApprovalRequest? ApprovalRequest { get; init; }
 }
