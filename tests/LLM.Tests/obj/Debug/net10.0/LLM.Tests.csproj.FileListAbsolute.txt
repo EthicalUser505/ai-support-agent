@@ -1,8 +1,3 @@
-C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.csproj.AssemblyReference.cache
-C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.AssemblyInfoInputs.cache
-C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.AssemblyInfo.cs
-C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.csproj.CoreCompileInputs.cache
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_LLM.Tests
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_LLM.Tests
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\bin\Debug\net10.0\testhost.dll
@@ -96,6 +91,11 @@ C:\Users\faris\ai-support-agent\tests\LLM.Tests\bin\Debug\net10.0\AgentCore.dll
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\bin\Debug\net10.0\AgentRuntime.dll
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\bin\Debug\net10.0\AgentCore.pdb
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\bin\Debug\net10.0\AgentRuntime.pdb
+C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.csproj.AssemblyReference.cache
+C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.AssemblyInfoInputs.cache
+C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.AssemblyInfo.cs
+C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.csproj.CoreCompileInputs.cache
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.csproj.Up2Date
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.dll
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\refint\LLM.Tests.dll

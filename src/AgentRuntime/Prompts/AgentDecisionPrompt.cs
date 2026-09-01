@@ -23,16 +23,18 @@ public static class AgentDecisionPrompt
         Return ONLY valid JSON matching this structure:
 
         {
-          "intent": "string",
-          "confidence": 0.0,
-          "summary": "string",
-          "action": {
-            "name": "string",
-            "parameters": {},
-            "confidence": 0.0
-          },
-          "missing_information": [],
-          "knowledge_references": []
+        "intent": "refund_request",
+        "confidence": 0.94,
+        "summary": "Customer is requesting a refund for an order.",
+        "action": {
+            "name": "lookup_order",
+            "parameters": {
+            "order_id": "12345"
+            },
+            "confidence": 0.91
+        },
+        "missing_information": [],
+        "knowledge_references": []
         }
 
         If no action is required, return:

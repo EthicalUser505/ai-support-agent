@@ -13,7 +13,8 @@ public class AgentDecisionValidatorTests
         var decision = new AgentDecision
         {
             Intent = "booking",
-            Confidence = 0.95
+            Confidence = 0.95,
+            Summary = "Customer wants to make a booking."
         };
 
         _validator.Validate(decision);
@@ -25,7 +26,8 @@ public class AgentDecisionValidatorTests
         var decision = new AgentDecision
         {
             Intent = "booking",
-            Confidence = 1.5
+            Confidence = 1.5,
+            Summary = "Test summary"
         };
 
         Assert.Throws<InvalidOperationException>(
@@ -38,10 +40,12 @@ public class AgentDecisionValidatorTests
         var decision = new AgentDecision
         {
             Intent = "",
-            Confidence = 0.9
+            Confidence = 0.9,
+            Summary = "Test summary"
         };
 
         Assert.Throws<InvalidOperationException>(
             () => _validator.Validate(decision));
     }
+
 }

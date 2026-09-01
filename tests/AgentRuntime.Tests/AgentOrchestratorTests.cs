@@ -10,11 +10,15 @@ public class AgentOrchestratorTests
     public async Task RunAsync_UsesLLMProvider()
     {
         var llm = new FakeLLMProvider();
+        var parser = new AgentDecisionParser();
+        var validator = new AgentDecisionValidator();
+        var policy = new FakePolicyEngine();
 
         var orchestrator = new AgentOrchestrator(
             llm,
-            new AgentDecisionParser(),
-            new AgentDecisionValidator());
+            parser,
+            validator,
+            policy);
 
         var request = new AgentRequest
         {

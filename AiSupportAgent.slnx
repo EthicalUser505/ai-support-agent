@@ -12,5 +12,6 @@
   <Folder Name="/tests/">
     <Project Path="tests/AgentRuntime.Tests/AgentRuntime.Tests.csproj" />
     <Project Path="tests/LLM.Tests/LLM.Tests.csproj" />
+    <Project Path="tests/Policy.Tests/Policy.Tests.csproj" />
   </Folder>
 </Solution>
