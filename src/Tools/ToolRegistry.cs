@@ -2,7 +2,7 @@ using AgentCore.Tools;
 
 namespace Tools;
 
-public sealed class ToolRegistry
+public sealed class ToolRegistry : IToolRegistry
 {
     private readonly Dictionary<string, ITool> _tools =
         new(StringComparer.OrdinalIgnoreCase);

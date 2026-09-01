@@ -13,5 +13,7 @@ public sealed class AgentRunResult
 
     public PolicyDecision? PolicyDecision { get; init; }
 
+    public ToolResult? ToolResult { get; init; }
+
     public LLMResponse? LLMResponse { get; init; }
 }
