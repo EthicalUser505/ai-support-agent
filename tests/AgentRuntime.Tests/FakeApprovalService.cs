@@ -34,20 +34,70 @@ public sealed class FakeApprovalService : IApprovalService
         string approvalId,
         CancellationToken cancellationToken = default)
     {
-        return Task.FromResult(LastRequest);
+        if (LastRequest is null ||
+            LastRequest.ApprovalId != approvalId)
+        {
+            return Task.FromResult<ApprovalRequest?>(null);
+        }
+
+        return Task.FromResult<ApprovalRequest?>(
+            LastRequest);
     }
 
     public Task<ApprovalRequest> ApproveAsync(
         string approvalId,
         CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        var request = GetExistingRequest(approvalId);
+
+        LastRequest = new ApprovalRequest
+        {
+            ApprovalId = request.ApprovalId,
+            ConversationId = request.ConversationId,
+            ActionName = request.ActionName,
+            Parameters = request.Parameters,
+            Reason = request.Reason,
+            Status = ApprovalStatus.Approved
+        };
+
+        return Task.FromResult(LastRequest);
     }
 
     public Task<ApprovalRequest> RejectAsync(
         string approvalId,
         CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        var request = GetExistingRequest(approvalId);
+
+        LastRequest = new ApprovalRequest
+        {
+            ApprovalId = request.ApprovalId,
+            ConversationId = request.ConversationId,
+            ActionName = request.ActionName,
+            Parameters = request.Parameters,
+            Reason = request.Reason,
+            Status = ApprovalStatus.Rejected
+        };
+
+        return Task.FromResult(LastRequest);
+    }
+
+    private ApprovalRequest GetExistingRequest(
+        string approvalId)
+    {
+        if (LastRequest is null ||
+            LastRequest.ApprovalId != approvalId)
+        {
+            throw new KeyNotFoundException(
+                $"Approval '{approvalId}' was not found.");
+        }
+
+        if (LastRequest.Status != ApprovalStatus.Pending)
+        {
+            throw new InvalidOperationException(
+                $"Approval '{approvalId}' is already {LastRequest.Status}.");
+        }
+
+        return LastRequest;
     }
 }

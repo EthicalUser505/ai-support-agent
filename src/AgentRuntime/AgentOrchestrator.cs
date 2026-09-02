@@ -4,6 +4,7 @@ using AgentRuntime.Decisions;
 using AgentRuntime.Execution;
 using AgentRuntime.Models;
 using AgentRuntime.Prompts;
+using AgentCore.Approval;
 
 namespace AgentRuntime;
 
@@ -13,18 +14,21 @@ public sealed class AgentOrchestrator : IAgentOrchestrator
     private readonly AgentDecisionParser _parser;
     private readonly AgentDecisionValidator _validator;
     private readonly ActionExecutionService _actionExecution;
+    private readonly IApprovalService _approval;
 
     public AgentOrchestrator(
-        ILLMProvider llm,
-        AgentDecisionParser parser,
-        AgentDecisionValidator validator,
-        ActionExecutionService actionExecution)
+    ILLMProvider llm,
+    AgentDecisionParser parser,
+    AgentDecisionValidator validator,
+    ActionExecutionService actionExecution,
+    IApprovalService approval)
     {
-        _llm = llm;
-        _parser = parser;
-        _validator = validator;
-        _actionExecution = actionExecution;
-    }
+            _llm = llm;
+            _parser = parser;
+            _validator = validator;
+            _actionExecution = actionExecution;
+            _approval = approval;
+        }
 
     public async Task<AgentRunResult> RunAsync(
         AgentRequest request,
@@ -123,6 +127,133 @@ public sealed class AgentOrchestrator : IAgentOrchestrator
             ToolResult = toolResult,
             ApprovalRequest = null,
             LLMResponse = llmResponse
+        };
+    }
+    public async Task<AgentRunResult> ResumeAsync(
+    ActionResumeRequest request,
+    AgentCore.Context.AgentContext context,
+    CancellationToken cancellationToken = default)
+{
+    ArgumentNullException.ThrowIfNull(request);
+    ArgumentNullException.ThrowIfNull(context);
+
+    var approval = await _approval.GetAsync(
+        request.ApprovalId,
+        cancellationToken);
+
+    if (approval is null)
+    {
+        throw new KeyNotFoundException(
+            $"Approval '{request.ApprovalId}' was not found.");
+    }
+
+    if (approval.Status == ApprovalStatus.Rejected)
+    {
+        return new AgentRunResult
+        {
+            Status = AgentRunStatus.ActionDenied,
+            Response = "The approved action was rejected.",
+            Decision = new AgentCore.Models.AgentDecision
+            {
+                Intent = "approved_action",
+                Confidence = 1.0,
+                Summary = "The approval request was rejected.",
+                Action = null
+            },
+            PolicyDecision = null,
+            ToolResult = null,
+            ApprovalRequest = approval,
+            LLMResponse = null
+        };
+    }
+
+    if (approval.Status != ApprovalStatus.Approved)
+    {
+        return new AgentRunResult
+        {
+            Status = AgentRunStatus.AwaitingHumanApproval,
+            Response = "This action is still awaiting human approval.",
+            Decision = new AgentCore.Models.AgentDecision
+            {
+                Intent = "approval_required",
+                Confidence = 1.0,
+                Summary = "The action is awaiting approval.",
+                Action = null
+            },
+            PolicyDecision = null,
+            ToolResult = null,
+            ApprovalRequest = approval,
+            LLMResponse = null
+        };
+    }
+
+    var executionResult = await _actionExecution.ResumeAsync(
+        approval,
+        context,
+        cancellationToken);
+
+    if (!executionResult.PolicyDecision.Allowed)
+    {
+        return new AgentRunResult
+        {
+            Status = AgentRunStatus.ActionDenied,
+            Response = "The action is no longer permitted.",
+            Decision = new AgentCore.Models.AgentDecision
+            {
+                Intent = "approved_action",
+                Confidence = 1.0,
+                Summary = "The previously approved action is no longer permitted.",
+                Action = null
+            },
+            PolicyDecision = executionResult.PolicyDecision,
+            ToolResult = null,
+            ApprovalRequest = approval,
+            LLMResponse = null
+        };
+    }
+
+        if (executionResult.ToolResult is null)
+        {
+            return new AgentRunResult
+            {
+                Status = AgentRunStatus.Failed,
+                Response = "The action could not be completed.",
+                Decision = new AgentCore.Models.AgentDecision
+                {
+                    Intent = "approved_action",
+                    Confidence = 1.0,
+                    Summary = "The approved action did not produce a tool result.",
+                    Action = null
+                },
+                PolicyDecision = executionResult.PolicyDecision,
+                ToolResult = null,
+                ApprovalRequest = approval,
+                LLMResponse = null
+            };
+        }
+
+        return new AgentRunResult
+        {
+            Status = executionResult.ToolResult.Success
+                ? AgentRunStatus.ActionExecuted
+                : AgentRunStatus.Failed,
+
+            Response = executionResult.ToolResult.Success
+                ? "The approved action was completed."
+                : "The approved action could not be completed.",
+
+            Decision = new AgentCore.Models.AgentDecision
+            {
+                Intent = "approved_action",
+                Confidence = 1.0,
+                Summary = "An approved action was resumed.",
+                Action = null
+            },
+
+            PolicyDecision = executionResult.PolicyDecision,
+            ToolResult = executionResult.ToolResult,
+            ApprovalRequest = approval,
+            LLMResponse = null
         };
     }
 }

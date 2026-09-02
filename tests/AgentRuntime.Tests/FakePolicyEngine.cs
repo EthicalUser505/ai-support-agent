@@ -6,8 +6,8 @@ namespace AgentRuntime.Tests;
 
 public sealed class FakePolicyEngine : IPolicyEngine
 {
-    private readonly bool _allowed;
-    private readonly bool _requiresHumanApproval;
+    private bool _allowed;
+    private bool _requiresHumanApproval;
 
     public ActionProposal? LastProposal { get; private set; }
 
@@ -15,6 +15,14 @@ public sealed class FakePolicyEngine : IPolicyEngine
 
     public FakePolicyEngine(
         bool allowed = true,
+        bool requiresHumanApproval = false)
+    {
+        _allowed = allowed;
+        _requiresHumanApproval = requiresHumanApproval;
+    }
+
+    public void SetPolicy(
+        bool allowed,
         bool requiresHumanApproval = false)
     {
         _allowed = allowed;
