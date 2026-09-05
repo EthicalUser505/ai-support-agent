@@ -1,10 +1,5 @@
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_Policy.Tests
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_Policy.Tests
-C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.csproj.AssemblyReference.cache
-C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.AssemblyInfoInputs.cache
-C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.AssemblyInfo.cs
-C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.csproj.CoreCompileInputs.cache
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\testhost.dll
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\xunit.abstractions.dll
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\testhost.exe
@@ -94,10 +89,15 @@ C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\AgentCore.d
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\Policy.dll
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\Policy.pdb
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\bin\Debug\net10.0\AgentCore.pdb
+C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.csproj.AssemblyReference.cache
+C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.AssemblyInfoInputs.cache
+C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.AssemblyInfo.cs
+C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.csproj.CoreCompileInputs.cache
+C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.sourcelink.json
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.T.D077B851.Up2Date
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.dll
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\refint\Policy.Tests.dll
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.pdb
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.genruntimeconfig.cache
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\ref\Policy.Tests.dll
-C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.sourcelink.json

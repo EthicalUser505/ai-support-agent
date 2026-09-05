@@ -5,8 +5,8 @@ C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\AgentCore.Genera
 C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\AgentCore.AssemblyInfoInputs.cache
 C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\AgentCore.AssemblyInfo.cs
 C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\AgentCore.csproj.CoreCompileInputs.cache
+C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\AgentCore.sourcelink.json
 C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\AgentCore.dll
 C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\refint\AgentCore.dll
 C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\AgentCore.pdb
 C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\ref\AgentCore.dll
-C:\Users\faris\ai-support-agent\src\AgentCore\obj\Debug\net10.0\AgentCore.sourcelink.json

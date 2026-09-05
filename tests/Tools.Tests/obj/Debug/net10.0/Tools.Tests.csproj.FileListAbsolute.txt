@@ -1,10 +1,5 @@
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_Tools.Tests
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_Tools.Tests
-C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.csproj.AssemblyReference.cache
-C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.AssemblyInfoInputs.cache
-C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.AssemblyInfo.cs
-C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.csproj.CoreCompileInputs.cache
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\testhost.dll
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\xunit.abstractions.dll
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\testhost.exe
@@ -94,10 +89,15 @@ C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\AgentCore.dl
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\Tools.dll
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\Tools.pdb
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\bin\Debug\net10.0\AgentCore.pdb
+C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.csproj.AssemblyReference.cache
+C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.AssemblyInfoInputs.cache
+C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.AssemblyInfo.cs
+C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.csproj.CoreCompileInputs.cache
+C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.sourcelink.json
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Te.D662D6A8.Up2Date
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.dll
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\refint\Tools.Tests.dll
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.pdb
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.genruntimeconfig.cache
 C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\ref\Tools.Tests.dll
-C:\Users\faris\ai-support-agent\tests\Tools.Tests\obj\Debug\net10.0\Tools.Tests.sourcelink.json

@@ -96,10 +96,10 @@ C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.Gene
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.AssemblyInfoInputs.cache
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.AssemblyInfo.cs
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.csproj.CoreCompileInputs.cache
+C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.sourcelink.json
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.csproj.Up2Date
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.dll
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\refint\LLM.Tests.dll
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.pdb
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.genruntimeconfig.cache
 C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\ref\LLM.Tests.dll
-C:\Users\faris\ai-support-agent\tests\LLM.Tests\obj\Debug\net10.0\LLM.Tests.sourcelink.json
