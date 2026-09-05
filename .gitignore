@@ -6,9 +6,6 @@
 *.userosscache
 *.sln.docstates
 
-# Ignore application data
-appsettings.Development.json
-
 # Ignore build outputs
 **/bin/
 **/obj/
