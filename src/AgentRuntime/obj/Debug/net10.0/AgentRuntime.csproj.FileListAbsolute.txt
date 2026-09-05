@@ -13,3 +13,4 @@ C:\Users\faris\ai-support-agent\src\AgentRuntime\obj\Debug\net10.0\AgentRuntime.
 C:\Users\faris\ai-support-agent\src\AgentRuntime\obj\Debug\net10.0\refint\AgentRuntime.dll
 C:\Users\faris\ai-support-agent\src\AgentRuntime\obj\Debug\net10.0\AgentRuntime.pdb
 C:\Users\faris\ai-support-agent\src\AgentRuntime\obj\Debug\net10.0\ref\AgentRuntime.dll
+C:\Users\faris\ai-support-agent\src\AgentRuntime\obj\Debug\net10.0\AgentRuntime.sourcelink.json

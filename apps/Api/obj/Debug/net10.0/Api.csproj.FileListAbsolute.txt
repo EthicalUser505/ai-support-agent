@@ -44,3 +44,7 @@ C:\Users\faris\ai-support-agent\apps\Api\obj\Debug\net10.0\refint\Api.dll
 C:\Users\faris\ai-support-agent\apps\Api\obj\Debug\net10.0\Api.pdb
 C:\Users\faris\ai-support-agent\apps\Api\obj\Debug\net10.0\Api.genruntimeconfig.cache
 C:\Users\faris\ai-support-agent\apps\Api\obj\Debug\net10.0\ref\Api.dll
+C:\Users\faris\ai-support-agent\apps\Api\obj\Debug\net10.0\Api.sourcelink.json
+C:\Users\faris\ai-support-agent\apps\Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\faris\ai-support-agent\apps\Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\faris\ai-support-agent\apps\Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll

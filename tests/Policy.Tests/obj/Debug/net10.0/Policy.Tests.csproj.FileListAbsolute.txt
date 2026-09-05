@@ -100,3 +100,4 @@ C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\refint\Poli
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.pdb
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.genruntimeconfig.cache
 C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\ref\Policy.Tests.dll
+C:\Users\faris\ai-support-agent\tests\Policy.Tests\obj\Debug\net10.0\Policy.Tests.sourcelink.json

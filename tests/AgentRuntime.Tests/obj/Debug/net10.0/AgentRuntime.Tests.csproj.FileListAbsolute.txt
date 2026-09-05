@@ -102,3 +102,4 @@ C:\Users\faris\ai-support-agent\tests\AgentRuntime.Tests\obj\Debug\net10.0\refin
 C:\Users\faris\ai-support-agent\tests\AgentRuntime.Tests\obj\Debug\net10.0\AgentRuntime.Tests.pdb
 C:\Users\faris\ai-support-agent\tests\AgentRuntime.Tests\obj\Debug\net10.0\AgentRuntime.Tests.genruntimeconfig.cache
 C:\Users\faris\ai-support-agent\tests\AgentRuntime.Tests\obj\Debug\net10.0\ref\AgentRuntime.Tests.dll
+C:\Users\faris\ai-support-agent\tests\AgentRuntime.Tests\obj\Debug\net10.0\AgentRuntime.Tests.sourcelink.json

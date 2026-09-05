@@ -5,6 +5,7 @@ public interface IMessageChannel
     string Name { get; }
 
     Task SendMessageAsync(
-        ChannelMessage message,
+        string conversationId,
+        string message,
         CancellationToken cancellationToken = default);
 }

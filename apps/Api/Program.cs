@@ -7,6 +7,8 @@ using AgentRuntime.Approval;
 using AgentRuntime.Decisions;
 using AgentRuntime.Execution;
 using AgentRuntime.Tools;
+using Api.Channels;
+using Api.Channels.Telegram;
 using Policy;
 using Tools;
 
@@ -44,6 +46,18 @@ builder.Services.AddSingleton<IToolRegistry>(
 
 // Orchestrator
 builder.Services.AddScoped<IAgentOrchestrator, AgentOrchestrator>();
+
+// Channels
+builder.Services.Configure<TelegramOptions>(
+    builder.Configuration.GetSection("Telegram"));
+
+builder.Services.AddHttpClient<TelegramChannel>(client =>
+{
+    client.BaseAddress =
+        new Uri("https://api.telegram.org/");
+});
+
+builder.Services.AddScoped<ChannelMessageProcessor>();
 
 // LLM provider
 // Register the YTL Ilmu implementation here once it exists.

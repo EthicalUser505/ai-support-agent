@@ -13,3 +13,4 @@ C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.dll
 C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\refint\Tools.dll
 C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.pdb
 C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\ref\Tools.dll
+C:\Users\faris\ai-support-agent\src\Tools\obj\Debug\net10.0\Tools.sourcelink.json

@@ -13,3 +13,4 @@ C:\Users\faris\ai-support-agent\src\LLM\obj\Debug\net10.0\LLM.dll
 C:\Users\faris\ai-support-agent\src\LLM\obj\Debug\net10.0\refint\LLM.dll
 C:\Users\faris\ai-support-agent\src\LLM\obj\Debug\net10.0\LLM.pdb
 C:\Users\faris\ai-support-agent\src\LLM\obj\Debug\net10.0\ref\LLM.dll
+C:\Users\faris\ai-support-agent\src\LLM\obj\Debug\net10.0\LLM.sourcelink.json

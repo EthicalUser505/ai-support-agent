@@ -13,3 +13,4 @@ C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.dll
 C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\refint\Policy.dll
 C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.pdb
 C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\ref\Policy.dll
+C:\Users\faris\ai-support-agent\src\Policy\obj\Debug\net10.0\Policy.sourcelink.json
